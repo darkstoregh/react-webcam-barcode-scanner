@@ -5,13 +5,14 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepare": "npm run build",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
     "build": "rm -rf dist && tsc --build tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dashboardphilippines/react-webcam-barcode-scanner.git"
+    "url": "git+https://github.com/darkstoregh/react-webcam-barcode-scanner.git"
   },
   "keywords": [
     "react",

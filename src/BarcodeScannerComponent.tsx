@@ -5,7 +5,8 @@ import Webcam from 'react-webcam'
 const BarcodeScannerComponent = ({
   width,
   height,
-  onUpdate
+  onUpdate,
+  ...props
 }: {
   width: number;
   height: number;
@@ -30,7 +31,7 @@ const BarcodeScannerComponent = ({
 
   React.useEffect(() => {
     setInterval(capture, 100)
-  }, []);
+  }, [])
 
   return (
     <Webcam
@@ -41,6 +42,7 @@ const BarcodeScannerComponent = ({
       videoConstraints={{
         facingMode: 'environment'
       }}
+      {...props}
     />
   )
 }
